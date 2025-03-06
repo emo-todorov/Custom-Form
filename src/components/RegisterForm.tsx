@@ -1,13 +1,17 @@
 import { Button, TextField } from "@mui/material";
 import { Controller, useForm } from "react-hook-form";
 import { formFields } from "./formFieldsConfig";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { createSchema } from "../schemes/registerScheme";
 
 const RegisterForm = () => {
   const {
     control,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm({
+    resolver: zodResolver(createSchema(formFields))
+  });
 
   return (
     <form onSubmit={handleSubmit(() => '')} autoComplete="off">
