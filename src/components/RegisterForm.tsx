@@ -37,15 +37,16 @@ const RegisterForm = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} autoComplete="off">
-      {formFields.map(({ name, label }) => (
+      {formFields.map(({ name, label, required }) => (
         <Controller
           key={name}
           name={name as keyof FormData}
           control={control}
+          shouldUnregister
           render={({ field }) => (
             <TextField
               {...field}
-              label={label}
+              label={required ? `${label}*` : label}
               fullWidth
               margin="normal"
               error={!!errors[name as keyof FormData]}
