@@ -1,0 +1,61 @@
+export const formFields = [
+    {
+        name: "firstName",
+        label: "First Name",
+        required: true,
+        pattern: /^[a-zA-Z'\-\s]+$/,
+        errorMessage: "The field must contain only letters, apostrophes, hyphens, and spaces.",
+        minLength: 2,
+        maxLength: 64,
+    },
+    {
+        name: "middleName",
+        label: "Middle Name",
+        required: false,
+        pattern: /^[a-zA-Z'\-\s]+$/,
+        errorMessage: "The field must contain only letters, apostrophes, hyphens, and spaces.",
+        minLength: 2,
+        maxLength: 64,
+    },
+    {
+        name: "lastName",
+        label: "Last Name",
+        required: true,
+        pattern: /^[a-zA-Z'\-\s]+$/,
+        errorMessage: "The field must contain only letters, apostrophes, hyphens, and spaces.",
+        minLength: 2,
+        maxLength: 64,
+    },
+    {
+        name: "egn",
+        label: "EGN",
+        required: false,
+        pattern: /^\d{10}$/
+    },
+    {
+        name: "address",
+        label: "Address",
+        required: true,
+        minLength: 2,
+        maxLength: 255,
+    },
+    {
+        name: "postcode",
+        label: "Postcode",
+        required: true,
+        pattern: /^\d{4}$/,
+        errorMessage: "Postcode must contain exactly four digits.",
+    },
+    {
+        name: "phoneNumber",
+        label: "Phone Number",
+        required: false,
+        pattern: /^(\+|00)\d{9,16}$/,
+    },
+    {
+        name: "emailAddress",
+        label: "Email Address",
+        required: false,
+        pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+    },
+];
