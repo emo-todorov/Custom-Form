@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import RegisterForm from "./components/RegisterForm";
+import RegisterForm from "./components/RegisterForm/RegisterForm";
 
 function App() {
 

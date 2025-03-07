@@ -2,9 +2,9 @@ import { Button, TextField } from "@mui/material";
 import { Controller, useForm } from "react-hook-form";
 import { formFields } from "./formFieldsConfig";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { createSchema } from "../schemes/registerScheme";
+import { createSchema } from "../../schemes/registerScheme";
 import { useMutation } from "@tanstack/react-query";
-import { postCustomer } from "../services/requests";
+import { postCustomer } from "../../services/requests";
 import { z } from "zod";
 
 const schema = createSchema(formFields);

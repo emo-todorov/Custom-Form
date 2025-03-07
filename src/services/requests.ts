@@ -1,4 +1,4 @@
-import { FormData } from "../components/RegisterForm";
+import { FormData } from "../components/RegisterForm/RegisterForm";
 
 export const postCustomer = async (data: FormData): Promise<void> => {
     const payload = {
